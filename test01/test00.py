@@ -26,6 +26,11 @@ p1=Person("我是王浩")
 print(p==p1)
 print(p)
 
-
+# ---请求www.baidu.com
+res=requests.get("http://www.baidu.com")
+res.encoding="utf-8"
+print(res.text)
+soup=BeautifulSoup(res.text,"html.parser")
+print(soup.select("a"))
 
 
