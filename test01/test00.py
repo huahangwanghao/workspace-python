@@ -34,3 +34,19 @@ soup=BeautifulSoup(res.text,"html.parser")
 print(soup.select("a"))
 
 
+try:
+    # 获取一个数据库连接，注意如果是UTF-8类型的，需要制定数据库
+    conn = pymysql.connect(host='59.110.215.202', user='root', passwd='wanghao', db='app_cms', port=3306,
+                           charset='utf8')
+    cur = conn.cursor()  # 获取一个游标
+    cur.execute('select * from t_a')
+    data = cur.fetchall()
+    for d in data:
+        # 注意int类型需要使用str函数转义
+        #print("ID: " + d[0] + '  用户名： ' + d[1] + "  注册时间： " + d[2])
+        # 字符串的拼接
+        print("id is %s name is %s  age is %s"   % (d[0],d[1],d[2]))
+    cur.close()  # 关闭游标
+    conn.close()  # 释放数据库资源
+except Exception as e :
+    print(e.args)
