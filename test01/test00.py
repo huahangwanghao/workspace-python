@@ -1,6 +1,6 @@
 import  requests
 import pymysql
-import json
+import time
 from bs4 import  BeautifulSoup
 
 print("hello world")
@@ -50,3 +50,19 @@ try:
     conn.close()  # 释放数据库资源
 except Exception as e :
     print(e.args)
+
+
+
+list1=[1,2,3]
+list2=[4,5,6]
+list3=[7,8,9]
+all=zip(list1,list2,list3)
+for a,b,c in all:
+    print(a,b,c)
+
+
+
+urls=["{}".format(str(i)) for i in range(10,100,10)]
+for url in urls:
+    time.sleep(2)
+    print(url)

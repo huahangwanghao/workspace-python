@@ -13,6 +13,10 @@ class TranserfMoney():
         pass
 
 
+def test(param):
+    pass
+
+
 if __name__ == '__main__':
     # 原账户
     source_accid=10
@@ -26,6 +30,7 @@ if __name__ == '__main__':
 
     try:
         tr_money.tm()
+        test(1)
     except Exception as e:
         print(e)
 
