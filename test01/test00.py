@@ -64,5 +64,16 @@ for a,b,c in all:
 
 urls=["{}".format(str(i)) for i in range(10,100,10)]
 for url in urls:
-    time.sleep(2)
+    #time.sleep(2)
     print(url)
+
+
+
+def zhishu(i):
+    return i%2==0
+
+
+list2=[1,2,3,4,5,6,7,8,9]
+# filter 过滤器, 把list2中所有的值都放到zhishu这个函数中,然后把return 为true的结果 打印出来.
+for list in filter (zhishu,list2):
+    print(list)
