@@ -1,7 +1,6 @@
 import  requests
 import pymysql
 import time
-
 from bs4 import  BeautifulSoup
 
 print("hello world")
@@ -62,34 +61,19 @@ for a,b,c in all:
     print(a,b,c)
 
 
-s= set ([1,2,3])
-s.add(31)
 
-print((1123 in s))
-
-lista = list()
-# list转为为set集合, 网上说这个对于set集合的遍历速度会快很多.
-seta=set(lista)
-print("start:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-for i in range(1,100000000):
-    pass
-    if i in lista:
-        pass
-print("end:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-
-print("start1:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-for j in range(1,100000000):
-    pass
-    if j in seta:
-        pass
-print("start2:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+urls=["{}".format(str(i)) for i in range(10,100,10)]
+for url in urls:
+    #time.sleep(2)
+    print(url)
 
 
 
-
-# urls=["{}".format(str(i)) for i in range(10,100,10)]
-# for url in urls:
-#     time.sleep(2)
-#     print(url)
+def zhishu(i):
+    return i%2==0
 
 
+list2=[1,2,3,4,5,6,7,8,9]
+# filter 过滤器, 把list2中所有的值都放到zhishu这个函数中,然后把return 为true的结果 打印出来.
+for list in filter (zhishu,list2):
+    print(list)
