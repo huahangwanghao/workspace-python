@@ -9,11 +9,12 @@ mpl.rcParams['ytick.labelsize'] = 24
 np.random.seed(5)
 
 # x轴的采样点, 等差数列  0~5 之间 取出来100个值
-x = np.linspace(0, 5, 3)
+x = np.linspace(0, 5, 9)
 
-# 通过下面曲线加上噪声生成数据，所以拟合模型就用y了……
+# 通过下面曲线加上噪声生成数据，所以拟合模型就用y了……   下面相当于俩个矩阵的相加
 y = 2*np.sin(x) + 0.3*x**2
-y_data = y + np.random.normal(scale=0.3, size=3)
+#什么 高斯的方程... 没有看懂
+y_data = y + np.random.normal(scale=0.3, size=9)
 
 # figure()指定图表名称
 plt.figure('数据')
