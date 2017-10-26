@@ -56,6 +56,7 @@ except Exception as e :
 list1=[1,2,3]
 list2=[4,5,6]
 list3=[7,8,9]
+print(max(list1))
 all=zip(list1,list2,list3)
 for a,b,c in all:
     print(a,b,c)
@@ -77,3 +78,12 @@ list2=[1,2,3,4,5,6,7,8,9]
 # filter 过滤器, 把list2中所有的值都放到zhishu这个函数中,然后把return 为true的结果 打印出来.
 for list in filter (zhishu,list2):
     print(list)
+
+
+import numpy as np
+heigth=[70,80,90]
+weigth=[10,20,30,2]
+np_h=np.array(heigth)
+np_w=np.array(weigth)
+
+print(np_h/np_w)
