@@ -11,7 +11,7 @@ rec="309140958@qq.com"
 message=MIMEText("张春春,同学你好!很高兴可以和你共进午餐,请您务必在到来的路上想好吃什么? 谢谢~","plain","utf-8")
 message['From']="18101307677@163.com"
 message['To']="309140958@qq.com"
-subject="中午吃什么?"
+subject="姐姐收的到吗?"
 message['Subject']=Header(subject,'utf-8')
 try:
     smtpObj=smtplib.SMTP()
